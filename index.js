@@ -12,6 +12,9 @@ buttonChangeGrid.addEventListener("click", () =>{
     butttonGridContainer.innerHTML = "";
     creatGrid(gridSize);
 })
+
+//Initial grid
+creatGrid(gridSize);
 //Main program to creat the grid layout
 function creatGrid (gridSize){
     for (let i = 0; i < gridSize; i++) {
