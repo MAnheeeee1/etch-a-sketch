@@ -1,0 +1,33 @@
+.grid-rows{
+    height: 50px;
+    width: 300px;
+    background-color: red;
+    display: flex;
+    flex: auto;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+.grid-container{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+}
+
+.grid-cell{
+    height: auto;
+    width: 20%;
+    background-color: white;
+    border: 1px solid black;
+    border-top: none;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
