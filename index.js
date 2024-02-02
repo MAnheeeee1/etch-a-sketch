@@ -2,7 +2,9 @@
 const gridContainer = document.querySelector(".grid-container");
 const buttonChangeGrid = document.querySelector(".change-grid");
 const buttonClearGrid = document.querySelector(".clear-grid");
+const buttonEraseGrid = document.querySelector(".erase-grid");
 let butttonGridContainer = document.querySelector(".grid-container");
+let rbgColours = ["red", "green", "blue"];
 
 let gridSize = 10;
 //Add a eventlistner on the button, to change grid
@@ -17,7 +19,9 @@ buttonClearGrid.addEventListener("click", () =>{
     butttonGridContainer.innerHTML = "";
     creatGrid(gridSize);
 })
-
+buttonEraseGrid.addEventListener("click", () =>{
+    alert("Hello");
+})
 
 //Initial grid
 creatGrid(gridSize);
@@ -34,7 +38,9 @@ function creatGrid (gridSize){
             gridCellElement.classList.add("grid-cell");
             //Makes the grid-cell change color
             gridCellElement.addEventListener("mouseover", () =>{
-                gridCellElement.style.backgroundColor = "black";
+                let randomNumber = Math.round(Math.random() * 3);
+                console.log(randomNumber);
+                gridCellElement.style.backgroundColor = rbgColours[randomNumber];
             })
             gridRowElement.appendChild(gridCellElement);
         }
