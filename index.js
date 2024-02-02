@@ -1,6 +1,7 @@
 //Store the html elemnt in a variable
 const gridContainer = document.querySelector(".grid-container");
-const buttonChangeGrid = document.querySelector("button");
+const buttonChangeGrid = document.querySelector(".change-grid");
+const buttonClearGrid = document.querySelector(".clear-grid");
 let butttonGridContainer = document.querySelector(".grid-container");
 
 let gridSize = 10;
@@ -12,6 +13,11 @@ buttonChangeGrid.addEventListener("click", () =>{
     butttonGridContainer.innerHTML = "";
     creatGrid(gridSize);
 })
+buttonClearGrid.addEventListener("click", () =>{
+    butttonGridContainer.innerHTML = "";
+    creatGrid(gridSize);
+})
+
 
 //Initial grid
 creatGrid(gridSize);
@@ -34,6 +40,3 @@ function creatGrid (gridSize){
         }
     }
 }
-
-
-
